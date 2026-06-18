@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FutureTech Academy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+    line-height:1.6;
+}
+
+nav{
+    background:#161b22;
+    padding:15px 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li{
+    cursor:pointer;
+    color:#00ffff;
+    transition:.3s;
+}
+
+nav ul li:hover{
+    color:white;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:linear-gradient(135deg,#0b3d91,#00bfff);
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:25px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:white;
+    color:#0b3d91;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+section{
+    padding:80px 8%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.stats,
+.courses,
+.faculty-container,
+.review-container,
+.blog-container,
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.box,
+.course-box,
+.teacher,
+.review,
+.blog-post{
+    background:#161b22;
+    padding:25px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.box:hover,
+.course-box:hover,
+.teacher:hover,
+.review:hover,
+.blog-post:hover{
+    transform:translateY(-8px);
+}
+
+.box h2{
+    color:#00ffff;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    height:250px;
+    object-fit:cover;
+}
+
+details{
+    background:#161b22;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:8px;
+}
+
+.contact form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact input,
+.contact textarea{
+    padding:12px;
+    border:none;
+    border-radius:6px;
+}
+
+.contact button{
+    padding:12px;
+    background:#00ffff;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    background:#161b22;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<ul>
+<li>Home</li>
+<li>About</li>
+<li>Courses</li>
+<li>Faculty</li>
+<li>Gallery</li>
+<li>Reviews</li>
+<li>Blog</li>
+<li>FAQ</li>
+<li>Contact</li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+<h1>FutureTech Academy</h1>
+<p>
+Learn Web Development, Data Science, Artificial Intelligence,
+Cyber Security and more from industry experts.
+</p>
+<button>Explore Courses</button>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+<p style="text-align:center;max-width:900px;margin:auto;">
+FutureTech Academy provides world-class education and
+hands-on projects to help students become industry-ready.
+Our mission is to bridge the gap between academic learning
+and real-world skills.
+</p>
+</section>
+
+<section>
+<h2>Our Achievements</h2>
+
+<div class="stats">
+
+<div class="box">
+<h2>5000+</h2>
+<p>Students Trained</p>
+</div>
+
+<div class="box">
+<h2>150+</h2>
+<p>Courses Available</p>
+</div>
+
+<div class="box">
+<h2>98%</h2>
+<p>Placement Success</p>
+</div>
+
+<div class="box">
+<h2>50+</h2>
+<p>Industry Mentors</p>
+</div>
+
+</div>
+</section>
+
+<section id="courses">
+<h2>Featured Courses</h2>
+
+<div class="courses">
+
+<div class="course-box">
+<h3>Full Stack Development</h3>
+<p>HTML, CSS, JavaScript, React, Node.js</p>
+</div>
+
+<div class="course-box">
+<h3>Data Science</h3>
+<p>Python, Machine Learning, Pandas</p>
+</div>
+
+<div class="course-box">
+<h3>Cyber Security</h3>
+<p>Ethical Hacking & Network Security</p>
+</div>
+
+<div class="course-box">
+<h3>Artificial Intelligence</h3>
+<p>Deep Learning & Computer Vision</p>
+</div>
+
+</div>
+</section>
+
+<section id="faculty">
+<h2>Meet Our Faculty</h2>
+
+<div class="faculty-container">
+
+<div class="teacher">
+<h3>Dr. Sarah Johnson</h3>
+<p>AI Research Specialist</p>
+</div>
+
+<div class="teacher">
+<h3>Michael Brown</h3>
+<p>Senior Full Stack Developer</p>
+</div>
+
+<div class="teacher">
+<h3>Emily Davis</h3>
+<p>Cyber Security Consultant</p>
+</div>
+
+</div>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+
+<div class="gallery">
+<img src="https://picsum.photos/400/300?1">
+<img src="https://picsum.photos/400/300?2">
+<img src="https://picsum.photos/400/300?3">
+<img src="https://picsum.photos/400/300?4">
+</div>
+</section>
+
+<section id="reviews">
+<h2>Student Reviews</h2>
+
+<div class="review-container">
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>Excellent teaching and practical projects.</p>
+<strong>Rahul Sharma</strong>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>Best online learning experience.</p>
+<strong>Priya Singh</strong>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>Helped me secure my first internship.</p>
+<strong>Aman Verma</strong>
+</div>
+
+</div>
+</section>
+
+<section id="blog">
+<h2>Latest Articles</h2>
+
+<div class="blog-container">
+
+<div class="blog-post">
+<h3>Top 10 Skills To Learn In 2026</h3>
+<p>Explore the most in-demand technology skills.</p>
+</div>
+
+<div class="blog-post">
+<h3>How To Become A Data Scientist</h3>
+<p>A complete roadmap for beginners.</p>
+</div>
+
+<div class="blog-post">
+<h3>Future Of Artificial Intelligence</h3>
+<p>How AI is transforming industries worldwide.</p>
+</div>
+
+</div>
+</section>
+
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+
+<details>
+<summary>Do I get a certificate?</summary>
+<p>Yes, after successful course completion.</p>
+</details>
+
+<details>
+<summary>Are classes recorded?</summary>
+<p>Yes, all classes are recorded.</p>
+</details>
+
+<details>
+<summary>Do you provide placement assistance?</summary>
+<p>Yes, resume building and interview support are included.</p>
+</details>
+
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+<h3>FutureTech Academy</h3>
+<p>Email: info@futuretechacademy.com</p>
+<p>Phone: +91 98765 43210</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
